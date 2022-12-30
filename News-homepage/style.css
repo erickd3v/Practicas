@@ -24,7 +24,7 @@ body .paragraph{
 }
 
 .hdr {
-    width: 100%;
+    width: 98.5%;
     height: 100%;
     margin: 20px 20px 40px;
 }
@@ -35,15 +35,14 @@ body .paragraph{
 }
 
 .logo-hdr {
-    width: 65%;
-    margin: var(--mg);
+    width: 5%;
+    margin: 20px 48rem 20px 10px;
 }
 
 .options-hdr {
-    width: 100px;
-    align-content: space-between;
+    width: 28rem;
     display: flex;
-    text-align: center;
+    justify-content: space-between;
     margin-top: 30px;
     height: 100%;
     opacity: 0.8;
@@ -57,22 +56,87 @@ body .paragraph{
 
 .paragraph-hdr {
     width: 80px;
+    margin-right: 1rem;
 }
 
 .container {
-    width: 100%;
+    width: 99%;
     margin: var(--mg);
     display: flex;
 }
 
 .principal {
     width: 70%;
+    height: 100%;
 }
 
 .container-p {
     width: 100%;
+    height: 100%;
+}
+
+.img-p{
+    width: 94%;
+    height: 60%;
+    margin-left: 1.2rem;
+}
+
+.container-secundario {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.title {
+    width: 20%;
+    font-size: 40px;
+    text-align: center;
+    padding-right: 90px;
+}
+
+.container-2 {
+    width: 37rem;
+    height: 100%;
+}
+
+.paragraph {
+    width: 18rem;
+    margin-left: 17rem;
+    justify-content: space-around;
+}
+
+.btn-secundario {
+    width: 9rem;
+    height: 2.5rem;
+    margin-left: 17rem;
+    margin-top: 20px;
+    background-color: var(--red);
+    border: none;
+    color: var(--Off-white);
+    letter-spacing: 3px;
 }
 
 .fila {
     width: 30%;
+    background-color: var(--Very-dark-blue);
+}
+
+.container-fila {
+    margin: 20px 25px;
+    height: 92.4%;
+}
+
+.title2 {
+    color: var(--orange);
+    font-size: 2.5rem;
+}
+
+.SubTitles {
+    color: var(--Off-white);
+    margin-top: 2rem;
+}
+
+.P-A {
+    margin: 0;
 }
