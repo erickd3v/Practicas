@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
 :root {
     /* Primary */
     --orange: hsl(35, 77%, 62%);
@@ -10,7 +12,7 @@
     /* Margin */
     --mg: 20px 50px 20px 10px;
     /* Font */
-
+    --fonts: 'Inter', sans-serif;
 }
 
 * {
