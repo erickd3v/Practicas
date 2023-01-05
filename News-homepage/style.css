@@ -26,34 +26,48 @@ body .paragraph{
 }
 
 .hdr {
-    width: 98.5%;
+    width: 99%;
     height: 100%;
-    margin: 20px 20px 40px;
+    margin: 20px 0 40px 12px;
 }
 
 .container-hdr {
     display: flex;
-    align-content: space-around;
 }
 
 .logo-hdr {
-    width: 5%;
-    margin: 20px 47.7rem 20px 10px;
+    width: 60%;
+    margin: 20px 0 20px 10px;
 }
 
 .options-hdr {
-    width: 28rem;
+    width: 38%;
     display: flex;
-    justify-content: space-between;
     margin-top: 30px;
     height: 100%;
     opacity: 0.8;
 }
 
+.menu {
+    display: none;
+}
+
+.bars {
+    display: none;
+}
+
+.bars ul {
+    list-style: none;
+}
+
+.close {
+    display: none;
+}
+
 .aa {
     text-decoration: none;
     color: var(--Dark-grayish-blue);
-    width: 100%;
+    width: 20%;
 }
 
 .paragraph-hdr {
@@ -66,7 +80,7 @@ body .paragraph{
 }
 
 .container {
-    width: 99%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
 }
@@ -76,16 +90,17 @@ body .paragraph{
     height: 100%;
 }
 
-/* .container-p {
+.container-p {
     width: 100%;
     height: 100%;
-} */
+}
 
-.img-p{
-    width: 94%;
-    height: 60%;
-    margin-left: 1.2rem;
-    background-image: url(./Imagenes/images/image-web-3-desktop.jpg);
+.img-p {
+    width: 96%;
+}
+
+.img-p2{
+    display: none;
 }
 
 .container-secundario {
@@ -96,26 +111,25 @@ body .paragraph{
 }
 
 .title {
-    width: 25%;
+    width: 54%;
     font-size: 39px;
-    text-align: center;
 
 }
 
 .container-2 {
     height: 100%;
+    width: 100%;
 }
 
 .paragraph {
-    width: 18rem;
-    margin-left: 17rem;
-    justify-content: space-around;
+    width: 64%;
+    margin-left: 9rem;
 }
 
 .btn-secundario {
-    width: 9rem;
+    width: 28%;
     height: 2.5rem;
-    margin-left: 17rem;
+    margin-left: 9rem;
     margin-top: 20px;
     background-color: var(--red);
     border: none;
@@ -129,12 +143,13 @@ body .paragraph{
 
 
 .fila {
-    width: 23%;
+    width: 29%;
+    height: 100%;
     background-color: var(--Very-dark-blue);
 }
 
 .container-fila {
-    margin: 20px 25px;
+    margin: 19px 25px;
     height: 92.4%;
 }
 
@@ -155,8 +170,14 @@ body .paragraph{
     color: var(--orange);
 }
 
+.paragrap {
+    font-size: 15px;
+    color: var(--Off-white);
+    opacity: 0.6;
+}
+
 .P-A {
-    width: 15.9rem;
+    width: 69%;
     margin: 0;
     height: 80px;
     border-bottom: 1px white solid;
@@ -170,8 +191,8 @@ body .paragraph{
 
 .footer {
     margin-top: 4rem;
-    width: 98%;
-    height: 14rem;
+    width: 97%;
+    height: 10rem;
     display: flex;
     justify-content: space-around;
 }
@@ -219,12 +240,132 @@ body .paragraph{
 
 @media (max-width:375px) {
     .hdr {
+        max-width: 375px;
+        width: 95%;
+        margin: auto;
+    }
+
+    .container-hdr {
+        max-width: 375px;
+    }
+
+    .logo-hdr {
         width: 100%;
+        margin: 20px 0 20px 5px;
+    }
+
+    #logo {
+        width: 3rem;
     }
 
     .img-p {
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        background: url(./Imagenes/images/image-web-3-mobile.jpg);
+        display: none;
+    }
+
+    .img-p2 {
+        display: revert;
+        max-width: 355px;
+        width: 100%;
+        margin: 0px 1px;
+    }
+
+    .options-hdr {
+        display: none;
+    }
+
+    .container {
+        align-items: center;
+        display: revert;
+        width: 97%;
+        margin: 1rem 0 1rem 0.6rem;
+    }
+
+    .principal {
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu {
+        display: revert;
+        color: black;
+        margin: 25px 0 20px;
+        height: 20px;
+    }
+    
+    .container-secundario {
+        display: revert;
+        margin: 0;
+    }
+
+    .title {
+        width: 80%;
+        text-align: left;
+        font-size: 44px;
+    }
+
+    body .paragraph {
+        margin: 0;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .btn-secundario {
+        margin-left: 0;
+    }
+
+    .fila {
+        width: 98%;
+        max-height: 550px;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    .container-fila {
+        margin: 19px 25px 19px;
+        max-height: 550px;
+        height: 100%;
+    }
+
+    .title2 {
+        padding-top: 20px;
+        font-size: 45px;
+    }
+
+    .SubTitles {
+        font-size: 22px;
+    }
+
+    .paragrap {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .P-A {
+        width: 100%;
+    }
+
+    .footer {
+        display: revert;
+        height: 100%;
+        margin: 1rem 0 1rem 0.6rem;
+        max-width: 360px;
+        width: 100%;
+    }
+
+    .container-footer {
+        margin-bottom: 2rem;
+        height: 120px;
+    }
+
+    .img-ft {
+        height: 100%;
+        max-width: 90px;
+        width: 100%;
+    }
+
+    .text-footer {
+        max-width: 204px;
+        width: 100%;
+        height: 100%;
     }
 }
