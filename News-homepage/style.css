@@ -369,3 +369,13 @@ body .paragraph{
         height: 100%;
     }
 }
+
+@keyframes muestraMenu {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.enlaces-menu.activado {
+    display: flex;
+    animation: muestraMenu 350ms ease-in-out both;
+}
