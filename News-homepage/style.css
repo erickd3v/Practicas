@@ -26,41 +26,36 @@ body .paragraph{
 }
 
 .hdr {
-    width: 99%;
+    width: 98%;
     height: 100%;
     margin: 20px 0 40px 12px;
 }
 
 .container-hdr {
     display: flex;
+    justify-content: space-between;
 }
 
 .logo-hdr {
-    width: 60%;
+    width: 50%;
     margin: 20px 0 20px 10px;
 }
 
-.options-hdr {
+.menu__nav {
     width: 38%;
-    display: flex;
     margin-top: 30px;
     height: 100%;
     opacity: 0.8;
 }
 
-.menu {
-    display: none;
-}
-
-.bars {
-    display: none;
-}
-
-.bars ul {
+.menu__ul {
+    display: flex;
+    justify-content: space-between;
     list-style: none;
+    gap: 10px;
 }
 
-.close {
+.icono {
     display: none;
 }
 
@@ -191,10 +186,10 @@ body .paragraph{
 
 .footer {
     margin-top: 4rem;
-    width: 97%;
+    width: 100%;
     height: 10rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .img-ft {
@@ -263,13 +258,13 @@ body .paragraph{
     }
 
     .img-p2 {
-        display: revert;
+        display: block;
         max-width: 355px;
         width: 100%;
         margin: 0px 1px;
     }
-
-    .options-hdr {
+    
+    .menu__nav{
         display: none;
     }
 
@@ -285,15 +280,43 @@ body .paragraph{
         width: 100%;
     }
 
-    .menu {
-        display: revert;
+    .icono {
+        display: block;
         color: black;
         margin: 25px 0 20px;
         height: 20px;
+        cursor: pointer;
+    }
+
+    #contenido .menu__ul {
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+    }
+
+    #contenido .menu__ul a{
+        display: block;
+        color: var(--Very-dark-blue);
+        margin-bottom: 5px;
+    }
+
+    .cerrar {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+
+    #cerrar {
+        background: none;
+        font-size: 20px;
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
     }
     
     .container-secundario {
-        display: revert;
+        display: block;
         margin: 0;
     }
 
@@ -345,11 +368,13 @@ body .paragraph{
     }
 
     .footer {
-        display: revert;
+        display: flex;
         height: 100%;
-        margin: 1rem 0 1rem 0.6rem;
-        max-width: 360px;
+        margin: 0;
+        max-width: 340px;
         width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .container-footer {
@@ -368,14 +393,4 @@ body .paragraph{
         width: 100%;
         height: 100%;
     }
-}
-
-@keyframes muestraMenu {
-    from{opacity: 0;}
-    to{opacity: 1;}
-}
-
-.enlaces-menu.activado {
-    display: flex;
-    animation: muestraMenu 350ms ease-in-out both;
 }

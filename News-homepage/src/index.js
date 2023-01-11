@@ -1,8 +1,4 @@
-const ham = document.querySelector('.ham');
-const enlaces = document.querySelector('.options-hdr');
-const barras = document.querySelectorAll('.ham .image');
+let nav = document.getElementById("menu__nav").innerHTML;
+let contenido = document.getElementById("contenido");
 
-ham.addEventListener('click', () => {
-    enlaces.classList.toggle('activado');
-    barras.forEach(child => {child.classList.toggle('animado')});
-});
+contenido.insertAdjacentHTML("beforeend", nav);

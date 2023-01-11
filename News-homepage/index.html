@@ -6,23 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New homepage</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./pushbar.min.css">
 </head>
 <body>
     <header class="hdr">
         <div class="container-hdr">
             <a href="#" class="logo-hdr"><img src="./Imagenes/images/logo.svg" alt="W." id="logo"></a>
-            <div class="options-hdr">
-                <a href="#" class="aa"><h4 class="paragraph-hdr">Home</h4></a>
-                <a href="#" class="aa"><h4 class="paragraph-hdr">New</h4></a>
-                <a href="#" class="aa"><h4 class="paragraph-hdr">Popular</h4></a>
-                <a href="#" class="aa"><h4 class="paragraph-hdr">Tending</h4></a>
-                <a href="#" class="aa"><h4 class="paragraph-hdr">Categories</h4></a>
-            </div>
-            <div>
-                <img src="./Imagenes/images/icon-menu.svg" alt="icon-menu" class="menu" id="bars-menu">
+            <nav class="menu__nav" id="menu__nav">
+                <ul class="menu__ul">
+                    <li><a href="#" class="aa paragraph-hdr">Home</a></li>
+                    <li><a href="#" class="aa paragraph-hdr">New</a></li>
+                    <li><a href="#" class="aa paragraph-hdr">Popular</a></li>
+                    <li><a href="#" class="aa paragraph-hdr">Tending</a></li>
+                    <li><a href="#" class="aa paragraph-hdr">Categories</a></li>
+                </ul>
+            </nav>
+            <div data-pushbar-target="contenido" class="icono">
+                <img src="./Imagenes/images/icon-menu.svg" alt="icon-menu">
             </div>
         </div>
     </header>
+    <div id="contenido" data-pushbar-id="contenido" data-pushbar-direction="right">
+        <div class="cerrar"><img id="cerrar" data-pushbar-close  src="./Imagenes/images/icon-menu-close.svg" alt="close"></div>
+    </div>
     <div class="container">
         <div class="principal">
             <div class="container-p">
@@ -75,6 +81,13 @@
             </div>
         </div>
     </div>
+    <script src="./src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
+    <script type="text/javascript">
+        const pushbar = new Pushbar({
+            blur: true,
+            overlay: true
+        });
+    </script>
 </body>
-<script src="./src/index.js"></script>
 </html>
