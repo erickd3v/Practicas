@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+        /* Colors */
+
+    /* Primary */
+
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+
+    /* Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very_dark_blue: hsl(224, 21%, 14%);
+
+        /* Trypography */
+
+    /* Body Copy */
+
+    --fs: 16px;
+
+    /* Font */
+
+    --Ff: 'Inter', sans-serif;
+    --Fw: 500, 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Very-light-grayish-blue);
+    font-family: var(--Ff);
+}
+
+.container-g {
+    background: var(--White);
+    margin: 56px 250px;
+    max-width: 730px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+    /* Modificando el Header */
+
+.pad {
+    width: 680px;
+    margin: auto;
+}
+
+.superior {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px 40px 0;
+}
+
+.Title {
+    display: flex;
+    width: 28%;
+    justify-content: space-between;
+    font-size: 22px;
+
+}
+
+.Number {
+    margin-top: 3px;
+    padding-left: 9px;
+    padding-top: 1px;
+    font-size: 16px;
+    width: 21px;
+    height: 20px;
+    align-content: center;
+    background-color: var(--blue);
+    border-radius: 5px;
+    color: var(--White);
+}
+
+.Option {
+    font-size: 14px;
+    padding: 4px;
+    color: var(--Dark-grayish-blue);
+}
+
+    /* Notificaiones */
+
+.container {
+    margin-top: 10px;
+}
+
+.notification {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 45px;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.n1 {
+    background-color: var(--Light-grayish-blue-2);
+    border-radius: 10px;
+}
+
+.perfil {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.op {
+    color: var(--Dark-grayish-blue);
+}
+
+.min {
+    color: var(--Dark-grayish-blue);
+}
