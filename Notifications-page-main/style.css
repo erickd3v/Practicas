@@ -40,9 +40,14 @@ body {
     font-family: var(--Ff);
 }
 
+body .paragraph {
+    font-weight: var(--Fw);
+    line-height: 1.3rem;
+}
+
 .container-g {
     background: var(--White);
-    margin: 56px 250px;
+    margin: 30px auto;
     max-width: 730px;
     width: 100%;
     border-radius: 10px;
@@ -52,6 +57,7 @@ body {
 
 .pad {
     width: 680px;
+    height: 730px;
     margin: auto;
 }
 
@@ -86,21 +92,21 @@ body {
     font-size: 14px;
     padding: 4px;
     color: var(--Dark-grayish-blue);
+    font-weight: var(--Fw);
 }
 
     /* Notificaiones */
 
 .container {
-    margin-top: 10px;
+    margin-top: -15px;
 }
 
 .notification {
     display: flex;
-    justify-content: space-between;
     width: 90%;
     height: 45px;
     padding: 10px 20px;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .n1 {
@@ -108,9 +114,27 @@ body {
     border-radius: 10px;
 }
 
+.n2 {
+    margin-top: 1.5rem;
+    height: 7rem;
+}
+
+.n-2 {
+    height: 3rem;
+}
+
+.n-3 {
+    height: 4rem;
+}
+
+.n3 {
+    margin-bottom: 30px;
+}
+
 .perfil {
     width: 2.8rem;
     height: 2.8rem;
+    margin-right: 1.5rem;
 }
 
 .op {
@@ -119,4 +143,32 @@ body {
 
 .min {
     color: var(--Dark-grayish-blue);
+    margin-bottom: 0.7rem;
+}
+
+.msg {
+    border: 1px solid var(--Light-grayish-blue-2);
+    border-radius: 4px;
+    height: 55%;
+    width: 96%;
+    font-size: 16px;
+    color: var(--Dark-grayish-blue);
+    padding: 10px;
+}
+
+.paragraph {
+    margin-bottom: 5px;
+}
+
+.np {
+    color: var(--blue);
+}
+
+s {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+}
+
+.chess {
+    margin-left: 10rem;
 }
