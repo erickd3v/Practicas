@@ -57,7 +57,7 @@ body .paragraph {
 
 .pad {
     width: 680px;
-    height: 730px;
+    height: 810px;
     margin: auto;
 }
 
@@ -77,15 +77,18 @@ body .paragraph {
 
 .Number {
     margin-top: 3px;
-    padding-left: 9px;
-    padding-top: 1px;
     font-size: 16px;
-    width: 21px;
+    width: 15%;
     height: 20px;
-    align-content: center;
+    display: flex;
+    justify-content: center;
     background-color: var(--blue);
     border-radius: 5px;
     color: var(--White);
+}
+
+.Number.white {
+    display: none;
 }
 
 .Option {
@@ -98,13 +101,13 @@ body .paragraph {
     /* Notificaiones */
 
 .container {
-    margin-top: -15px;
+    margin: auto;
 }
 
 .notification {
     display: flex;
     width: 90%;
-    height: 45px;
+    height: 70px;
     padding: 10px 20px;
     margin-bottom: 10px;
 }
@@ -112,6 +115,18 @@ body .paragraph {
 .n1 {
     background-color: var(--Light-grayish-blue-2);
     border-radius: 10px;
+}
+
+.n1.white {
+    background-color: white;
+}
+
+.n-1 {
+    height: 50px;
+}
+
+.punto.white {
+    display: none;
 }
 
 .n2 {
@@ -158,10 +173,11 @@ body .paragraph {
 
 .paragraph {
     margin-bottom: 5px;
+    padding-right: 10rem;
 }
 
 .np {
-    color: var(--blue);
+    color: var(--Dark-grayish-blue);
 }
 
 s {
@@ -169,6 +185,75 @@ s {
     color: var(--Dark-grayish-blue);
 }
 
-.chess {
-    margin-left: 10rem;
+/* Cursor: pointer */
+
+.Option:hover{
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.op:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.np:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.name:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.msg:hover {
+    cursor: pointer;
+    background: var(--Light-grayish-blue-1);
+}
+
+.chess:hover {
+    cursor: pointer;
+    border: 2.3px solid var(--Light-grayish-blue-1);
+    border-radius: 8px;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 700px) {
+    .pad {
+        max-width: 660px;
+        width: 90%;
+        height: 100%;
+    }
+
+    .superior {
+        max-width: 600px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .Title {
+        width: 35%;
+    }
+
+    .container {
+        max-width: 600px;
+        width: 80%;
+        padding-right: 40px;
+    }
+
+    .notification {
+        height: 100%;
+        width: 100%;
+    }
+
+    .paragraph {
+        padding-right: 8px;
+    }
+
+    .chess {
+        width: 40px;
+        height: 40px;
+    }
 }
