@@ -1,26 +1,20 @@
-var btn = document.getElementById('btn');
-var caja = document.getElementById('n1');
-var caja2 = document.getElementById('n2');
-var caja3 = document.getElementById('n3');
-var punto1 = document.getElementById('punto1');
-var punto2 = document.getElementById('punto2');
-var punto3 = document.getElementById('punto3');
-var number = document.getElementById('Number');
-var contador = 0;
+let btn = document.getElementById('btn');
+let caja = document.querySelectorAll('.n1');
+let punto1 = document.querySelectorAll('.punto');
+let number = document.getElementById('Number');
 
-
-function change() {
-    if(contador == 0){
-        punto1.classList.add('white');
-        punto2.classList.add('white');
-        punto3.classList.add('white');
-        caja.classList.add('white');
-        caja2.classList.add('white');
-        caja3.classList.add('white');
-        number.classList.add('white');
-        contador = 1;
-    } else() => {}
+function toggleClass(element, className) {
+    if (element.classList.contains(className)) {
+        
+    } else {
+        element.classList.add(className);
+    }
 }
 
+function change() {
+    caja.forEach(element => toggleClass(element, 'white'));
+    punto1.forEach(element => toggleClass(element, 'white'));
+    number.classList.add('white');
+}
 
-btn.addEventListener('click',change,true);
+btn.addEventListener('click', change);
