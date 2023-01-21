@@ -9,7 +9,86 @@
 </head>
 <body>
     
+    <main class="container">
+        <div class="target">
+            <!-- Parte frontal de la targeta -->
+            <div class="front">
+                <img src="./images/bg-card-front.png" alt="front" class="img1">
+                <div class="card-front_data">
+                    <img src="./images/card-logo.svg" alt="point" class="point">
+                    <div>
+                        <p id="card-number" class="number-card">0000 0000 0000 0000</p>
+                        <div class="more-dates">
+                            <p id="card-name">JANE APPLESEED</p>
+                            <p>
+                                <span id="card-month">00</span>/<span id="card-year">00</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                <!-- Use 2 tecnicas para cada img -->
 
+            <!-- parte trasera de la tarjeta -->
+            <div class="back">
+                <img src="./images/bg-card-back.png" alt="security" class="img2">
+                <div class="card-back_data">
+                    <p class="cvc-p" id="card-cvc">000</p>
+                </div>
+            </div>
+        </div>
+
+                    <!-- Formulario -->
+
+        <div class="form-container">
+            <form class="form" id="form">
+
+                    <!-- Datos basicos -->
+
+                <div class="form-group">
+                    <label for="input-name" class="label">CARDHOLDER NAME</label>
+                    <input class="input" type="text" placeholder="e.g. Jane Applessed" id="input-name" required>
+                </div>
+
+                    <!-- Numero de la targeta -->
+
+                <div class="form-group">
+                    <label for="input-number" class="label">CARD NUMBER</label>
+                    <input class="input" placeholder="e.g. 1234 5678 9123 0000" id="input-number" required>
+                </div>
+
+                    <!-- Fecha de caducidad -->
+
+                <div class="form-group double">
+                    <div class="rows">
+                        <label for="input-Month" class="label">EXP. DATE (MM/YY)</label>
+                        <div class="columns">
+                            <input class="input" placeholder="MM" id="input-Month" maxlength="2" required>
+                            <input class="input" placeholder="YY" id="input-Year" maxlength="2" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="input-CVC" class="label">CVC</label>
+                        <input class="input" placeholder="e.g. 123" id="input-CVC" maxlength="3" required>
+                    </div>
+                </div>
+
+                    <!-- Boton usarlo con Js -->
+                <div class="form-group">
+                    <button type="submit" id="btn" class="btn">Confirm</button>
+                </div>
+            </form>
+                <div class="thanks disabled" id="thanks">
+                    <img src="./images/icon-complete.svg" alt="icon-complete">
+                    <p class="thanks-p">THANK YOU!</p>
+                    <p class="thanks-text">We've added your card details</p>
+                    <button class="btn" id="continue">Continue</button>
+                </div>
+        </div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js" integrity="sha512-KaIyHb30iXTXfGyI9cyKFUIRSSuekJt6/vqXtyQKhQP6ozZEGY8nOtRS6fExqE4+RbYHus2yGyYg1BrqxzV6YA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./src/main.js"></script>
 </body>
 </html>
