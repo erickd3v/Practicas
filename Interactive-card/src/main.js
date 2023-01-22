@@ -39,6 +39,10 @@ inputNumber.addEventListener("input", () => {
 });
 
     // Lista de eventos para el MES y AÑO de la card
+var cleaveDate = new Cleave('#input-Month', {
+    date: true,
+    datePattern: ['m']
+});
 
 inputMonth.addEventListener("input", () => {
     cardMoth.innerText = inputMonth.value;
@@ -46,6 +50,11 @@ inputMonth.addEventListener("input", () => {
     if (inputMonth.value.length === 0) {
         cardMoth.innerText = "00";
     }
+});
+
+var cleaveDate = new Cleave('#input-Year', {
+    date: true,
+    datePattern: ['y']
 });
 
 inputYear.addEventListener("input", () => {
@@ -57,6 +66,11 @@ inputYear.addEventListener("input", () => {
 });
 
     // Lista de eventos para el CVC
+
+new Cleave('#input-CVC', {
+    numericOnly: true,
+    blocks: [3]
+});
 
 inputCVC.addEventListener("input", () => {
     cardCVC.innerText = inputCVC.value;
