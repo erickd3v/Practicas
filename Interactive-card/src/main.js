@@ -110,7 +110,7 @@ let cvcValidation = false
 
         // Validando datos con el boton confirmar
 confirmar.addEventListener('click', (e)=>{
-    (e).preventDefault();
+    e.preventDefault();
 
     // validar Name
     if (verifyIsFilled(inputName, errorName)) {
