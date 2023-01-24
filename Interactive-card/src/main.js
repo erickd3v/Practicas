@@ -1,102 +1,206 @@
-        // Extracción de los ID
-const inputName = document.querySelector('#input-name');
-const inputNumber = document.querySelector('#input-number');
-const inputMonth = document.querySelector('#input-Month');
-const inputYear = document.querySelector('#input-Year');
-const inputCVC = document.querySelector('#input-CVC');
-const cardNumber = document.querySelector('#card-number');
-const cardName = document.querySelector('#card-name');
-const cardMoth = document.querySelector('#card-month');
-const cardYear = document.querySelector('#card-year');
-const cardCVC = document.querySelector('#card-cvc');
-const form = document.querySelector('#form');
-const thanks = document.querySelector('#thanks');
-const continues = document.querySelector('#continue');
+                // Extracción de los ID
+
+        // CARDHOLDER NAME
+let inputName = document.querySelector('#input-name');
+let cardName = document.querySelector('#card-name');
+let errorName = document.querySelector('.from__errorName--error');
+
+        // CARD NUMBER
+let inputNumber = document.querySelector('#input-number');
+let cardNumber = document.querySelector('#card-number');
+let errorNumber = document.querySelector('.from__errorNumber--error');
+
+        // CARD MONTH
+let inputMonth = document.querySelector('#input-Month');
+let cardMoth = document.querySelector('#card-month');
+let errorMonth = document.querySelector('.from__errorMonth--error');
+
+        // CARD YEAR
+let inputYear = document.querySelector('#input-Year');
+let cardYear = document.querySelector('#card-year');
+let errorYear = document.querySelector('.from__errorYear--error');
+
+        // CARD CVC
+let inputCVC = document.querySelector('#input-CVC');
+let cardCVC = document.querySelector('#card-cvc');
+let errorCVC = document.querySelector('.from__errorCVC--error');
+
+        // FORM
+let form = document.querySelector('#form');
+
+        // Button ID
+let confirmar = document.querySelector('#btn');
+let thanks = document.querySelector('#thanks');
+let continues = document.querySelector('#continue');
 
 
-    // Creamos una lista de eventos para el CARDHOLDER NAME
+    // Ingreso dinamico del CARDHOLDER NAME
 
 inputName.addEventListener("input", () => {
-    cardName.innerText = inputName.value;
-
-    if (inputName.value.length === 0) {
+    if (inputName.value.length == '') {
         cardName.innerText = "Jane Applessed";
+    } else {
+        cardName.innerText = inputName.value
     }
 });
 
-var cleaveCreditCard = new Cleave('#input-number', {
-    creditCard: true
-});
+    // Ingreso dinamico CARD NUMBER 
 
-    // Lita de eventos para el CARD NUMBER
+inputNumber.addEventListener("input", (e) => {
+    let inputValue = e.target.value;
 
-inputNumber.addEventListener("input", () => {
+    // Actualizando graficamente la tarjeta:
     cardNumber.innerText = inputNumber.value;
 
-    if (inputNumber.value.length === 0) {
-        cardNumber.innerText = "0000 0000 0000 0000";
+    // Validando que haya una letra:
+    if (validateLetters(inputNumber, errorNumber)) {
+    } else {
+        // agregando espacios cada 4 digitos, borrando espacios ingresados por el usario,
+        inputNumber.value = inputValue.replace(/\s/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
+    }
+
+    // Mostrando los 0s por defecto cuando no se ha ingresado nada
+    if (inputNumber.value == '') {
+        cardNumber.innerText = '0000 0000 0000 0000';
     }
 });
 
-    // Lista de eventos para el MES y AÑO de la card
-var cleaveDate = new Cleave('#input-Month', {
-    date: true,
-    datePattern: ['m']
-});
+    // Ingreso Dinamico del MES y AÑO
 
 inputMonth.addEventListener("input", () => {
     cardMoth.innerText = inputMonth.value;
+    validateLetters(inputMonth, errorMonth);
 
-    if (inputMonth.value.length === 0) {
-        cardMoth.innerText = "00";
+    // Mostrando los 0s por defecto cuando no se ha ingresado nada
+    if (inputMonth.value == '') {
+        cardMoth.innerText = '00';
     }
-});
-
-var cleaveDate = new Cleave('#input-Year', {
-    date: true,
-    datePattern: ['y']
 });
 
 inputYear.addEventListener("input", () => {
     cardYear.innerText = inputYear.value;
+    validateLetters(inputYear, errorYear);
 
-    if (inputYear.value.length === 0) {
-        cardYear.innerText = "00";
+    // Mostrando los 0s por defecto cuando no se ha ingresado nada
+    if (inputYear.value == '') {
+        cardYear.innerText = '00';
     }
 });
 
-    // Lista de eventos para el CVC
-
-new Cleave('#input-CVC', {
-    numericOnly: true,
-    blocks: [3]
-});
+    // Ingreso dinamico del CVC
 
 inputCVC.addEventListener("input", () => {
     cardCVC.innerText = inputCVC.value;
-
-    if (inputCVC.value.length === 0) {
-        cardCVC.innerText = "000";
+    validateLetters(inputCVC, errorCVC);
+    
+    // Mostrando los 0s por defecto cuando no se ha ingresado nada
+    if (inputCVC.value == '') {
+        cardCVC.innerText = '000';
     }
 });
 
-        // Lista de Eventos para el boton Confirmar y continuar
+            // Ingreso dinamico del boton Confirmar y continuar
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    form.classList.add("disabled");
-    thanks.classList.remove("disabled");
+
+let nameValidation = false;
+let numberValidation = false;
+let monthValidation = false;
+let yearValidation = false;
+let cvcValidation = false
+
+        // Validando datos con el boton confirmar
+confirmar.addEventListener('click', (e)=>{
+    (e).preventDefault();
+
+    // validar Name
+    if (verifyIsFilled(inputName, errorName)) {
+        nameValidation = true;
+    } else {
+        nameValidation = false;
+    }
+
+    // Validar Numero
+    if(verifyIsFilled(inputNumber, errorNumber)){
+        if(inputNumber.value.length == 19){
+            numberValidation = true;
+        } else {
+            showError(inputNumber, errorNumber, 'Wrong number');
+            numberValidation = false;
+        }
+    }
+    
+    // Validar Mes
+    if(verifyIsFilled(inputMonth, errorMonth)){
+        if(parseInt(inputMonth.value)>0 && parseInt(inputMonth.value)<=12){
+            monthValidation = true;
+        } else {
+            showError(inputMonth, errorMonth, 'Month incorrect');
+            monthValidation = false;
+        }
+    }
+
+    // Validar Año
+    if (verifyIsFilled(inputYear, errorYear)){
+        yearValidation = true;
+    } else {
+        yearValidation = false;
+    }
+
+    // Validar CVC
+    if(verifyIsFilled(inputCVC, errorCVC)){
+        if(inputCVC.value.length == 3){
+            cvcValidation = true;
+        } else {
+            showError(inputCVC, errorCVC, 'Wrong CVC');
+            cvcValidation = false;
+        }
+    }
+
+    if (nameValidation == true && numberValidation == true && monthValidation == true && yearValidation == true && cvcValidation == true){
+        form.classList.add("disabled");
+        thanks.classList.remove("disabled");
+    }
+
+    continues.addEventListener('click', () => {
+        form.classList.remove("disabled");
+        thanks.classList.add("disabled");
+        cardName.innerText = "Jane Applessed";
+        cardNumber.innerText = "0000 0000 0000 0000";
+        cardMoth.innerText = "00";
+        cardYear.innerText = "00";
+        cardCVC.innerText = "000";
+        form.reset();
+    });
 });
 
-    // Regresando al HTML inicial con otra lista de eventos
+    // Funciones :
 
-continues.addEventListener('click', () => {
-    form.classList.remove("disabled");
-    thanks.classList.add("disabled");
-    cardName.innerText = "Jane Applessed";
-    cardNumber.innerText = "0000 0000 0000 0000";
-    cardMoth.innerText = "00";
-    cardYear.innerText = "00";
-    cardCVC.innerText = "000";
-    form.reset();
-});
+function showError(divInput, divError, msgError, show = true){
+    if(show){
+        divError.innerText = msgError;
+        divInput.style.borderColor = '#FF0000';
+    } else {
+        divError.innerText = msgError;
+        divInput.style.borderColor = 'hsl(270, 3%, 87%)';
+    }
+}
+
+function verifyIsFilled(divInput, divError){
+    if(divInput.value.length> 0){
+        showError(divInput, divError, "", false);
+        return true;
+    } else{
+        showError(divInput, divError, "Can't be blank");
+        return false; 
+    }
+}
+
+function validateLetters(input, divError) {
+    // Validando que haya una letra,
+    let regExp = /[A-z]/g;
+    if(regExp.test(input.value)) {
+        showError(input, divError, 'Wrong format, numbers only');
+    } else {
+        showError(input, divError, '', false);
+    }
+}

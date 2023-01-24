@@ -48,14 +48,16 @@
 
                 <div class="form-group">
                     <label for="input-name" class="label">CARDHOLDER NAME</label>
-                    <input class="input" type="text" placeholder="e.g. Jane Applessed" id="input-name" required>
+                    <input class="input" type="text" placeholder="e.g. Jane Applessed" id="input-name">
+                    <div class="from__errorName--error error"></div>
                 </div>
 
                     <!-- Numero de la targeta -->
 
                 <div class="form-group">
                     <label for="input-number" class="label">CARD NUMBER</label>
-                    <input class="input" placeholder="e.g. 1234 5678 9123 0000" id="input-number" required>
+                    <input class="input" placeholder="e.g. 1234 5678 9123 0000" id="input-number" maxlength="19">
+                    <div class="from__errorNumber--error error"></div>
                 </div>
 
                     <!-- Fecha de caducidad -->
@@ -64,13 +66,20 @@
                     <div class="rows">
                         <label for="input-Month" class="label">EXP. DATE (MM/YY)</label>
                         <div class="columns">
-                            <input class="input" placeholder="MM" id="input-Month" required>
-                            <input class="input" placeholder="YY" id="input-Year" required>
+                            <div>
+                                <input class="input" placeholder="MM" id="input-Month" maxlength="2">
+                                <div class="from__errorMonth--error error"></div>
+                            </div>
+                            <div>
+                                <input class="input" placeholder="YY" id="input-Year" maxlength="2">
+                                <div class="from__errorYear--error error"></div>
+                            </div>
                         </div>
                     </div>
                     <div>
                         <label for="input-CVC" class="label">CVC</label>
-                        <input class="input" placeholder="e.g. 123" id="input-CVC" required>
+                        <input class="input" placeholder="e.g. 123" id="input-CVC" maxlength="3">
+                        <div class="from__errorCVC--error error"></div>
                     </div>
                 </div>
 

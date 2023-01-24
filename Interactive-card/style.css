@@ -142,7 +142,7 @@
 }
 
 .form-group.double > div {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -214,9 +214,15 @@
     margin-bottom: 2rem;
     border: 0;
 }
-
+        /* Iteraccion del usuario */
 .disabled {
     display: none;
+}
+
+.error {
+    color: var(--Red);
+    font-size: 7.5px;
+    font-weight: 800;
 }
 
 
@@ -270,11 +276,21 @@
         margin-right: auto;
     }
 
+    .label {
+        width: 10rem;
+    }
+
     .form {
         width: 25rem;
     }
 
     .thanks {
         width: 25rem;
+    }
+
+        /* error */
+    
+    .error {
+        font-size: 10px
     }
 }
