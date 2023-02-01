@@ -32,17 +32,17 @@ body {
     background-color: var(--Cream);
     font-family: var(--FF);
     font-weight: var(--FW1);
+    height: 55.8rem;
 }
 
 .wrap {
-    max-width: 1920px;
-    width: 100%;
-    max-height: 1080px;
+    width: 69%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 370.5px auto;
+    margin: 2rem auto;
 }
         /* Header */
 .wrap-hd {
@@ -50,9 +50,9 @@ body {
     border-radius: 15px;
     display: flex;
     justify-content: space-around;
-    width: 30%;
-    height: 85px;
-    gap: 35%;
+    width: 75%;
+    height: 100px;
+    gap: 50%;
     margin-bottom: 1rem;
 }
 
@@ -81,107 +81,194 @@ body {
 .wrap-body {
     background-color: var(--Very-pale-orange);
     border-radius: 15px;
-    width: 30%;
+    width: 75%;
+    height: 65%;
     gap: 35%;
 }
 
 .title-body {
-    margin: 1.5rem;
+    margin: 2.5rem;
     color: var(--Dark-brown);
 }
 
 .wrap-graphic {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 1rem;
+    padding: 1rem 1.5rem;
     font-size: 14px;
     color: var(--Medium-brown);
+    align-items: flex-end;
+    height: 61%;
 }
 
 .graphic {
     width: 13%;
+    height: 21rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .bar1 {
-    width: 90%;
+    width: 70%;
     margin: 0 2px;
-    height: 3.3rem;
+    height: 27%;
     border-radius: 5px;
     background-color: var(--Soft-red);
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .bar2 {
-    width: 90%;
+    width: 70%;
     margin: 0 2px;
-    height: 6.3rem;
+    height: 52%;
     border-radius: 5px;
     background-color: var(--Soft-red);
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .bar3 {
-    width: 90%;
+    width: 70%;
     margin: 0 2px;
-    height: 10.3rem;
+    height: 82%;
     border-radius: 5px;
     background-color: var(--Cyan);
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .bar4 {
-    width: 90%;
+    width: 70%;
     margin: 0 2px;
-    height: 5.5rem;
+    height: 47%;
     border-radius: 5px;
     background-color: var(--Soft-red);
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .bar5 {
-    width: 90%;
+    width: 70%;
     margin: 0 2px;
-    height: 4.5rem;
+    height: 37%;
     border-radius: 5px;
     background-color: var(--Soft-red);
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .bar6 {
-    width: 90%;
+    width: 70%;
     margin: 0 2px;
-    height: 8.3rem;
+    height: 72%;
     border-radius: 5px;
     background-color: var(--Soft-red);
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .bar7 {
-    width: 90%;
+    width: 70%;
     margin: 0 2px;
-    height: 4.3rem;
+    height: 4.6rem;
     border-radius: 5px;
     background-color: var(--Soft-red);
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .day {
     display: flex;
     justify-content: center;
+    font-size: 16px;
 }
 
         /* Footer */
 .wrap-footer {
     border-top: 1px solid var(--Cream);
-    padding-top: 1rem;
+    padding: 1rem 0 1.5rem;
+    margin: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-footer {
+    color: var(--Medium-brown);
+    font-size: 16px;
+    font-weight: var(--FW1);
+    padding-bottom: 1px;
+}
+
+.money-footer{
+    color: var(--Dark-brown);
+    font-size: 39px;
+    font-weight: var(--FW2);
+}
+
+.percentage {
+    padding-top: 1.3rem;
+}
+
+.percent {
+    color: var(--Dark-brown);
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    font-weight: var(--FW2);
+}
+
+.percent-ft {
+    color: var(--Medium-brown);
+    font-size: 16px;
+    font-weight: var(--FW1);
+}
+
+@media (max-width: 750px) {
+    .wrap {
+        width: 100%;
+    }
+
+    .wrap-hd {
+        gap: 25%;
+    }
+
+    .bars {
+        border-radius: 2.5px;
+    }
+
+    .day {
+        font-size: 12px;
+    }
+
+    .wrap-footer {
+        gap: 10px;
+    }
+
+    .title-footer {
+        font-size: 12px;
+    }
+
+    .money-footer {
+        font-size: 28px;
+    }
+    
+    .percent {
+        font-size: 14px;
+    }
+
+    .percent-ft {
+        font-size: 8.5px;
+        display: flex;
+        justify-content: flex-end;
+    }
 }
