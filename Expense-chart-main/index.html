@@ -5,73 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expenses chart component</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    
-    <div class="wrap">
-            <!-- Balance -->
-        <header class="wrap-hd">
-            <div class="wrap-1">
-                <h6 class="title">My balance</h6>
-                <p class="money">$921.48</p>
+
+    <main class="main-container">
+        <div class="balance">
+            <div>
+                <p class="balance__title">My balance</p>
+                <p class="balance__total">$921.48</p>
             </div>
-            <img src="./image/logo.svg" alt="logo" class="logo">
-        </header>
-        <!-- Grafico -->
-        <div class="wrap-body">
-            <h2 class="title-body">Spending - Last 7 days</h2>
-            <div class="wrap-graphic">
-                <div class="graphic">
-                    <p class="cash"></p>
-                    <div class="bar1 bars"></div>
-                    <p class="day">mon</p>
-                </div>
-                <div class="graphic">
-                    <p class="cash"></p>
-                    <div class="bar2 bars"></div>
-                    <p class="day">tue</p>
-                </div>
-                <div class="graphic">
-                    <p class="cash"></p>
-                    <div class="bar3 bars"></div>
-                    <p class="day">wed</p>
-                </div>
-                <div class="graphic">
-                    <p class="cash"></p>
-                    <div class="bar4 bars"></div>
-                    <p class="day">thu</p>
-                </div>
-                <div class="graphic">
-                    <p class="cash"></p>
-                    <div class="bar5 bars"></div>
-                    <p class="day">fri</p>
-                </div>
-                <div class="graphic">
-                    <p class="cash"></p>
-                    <div class="bar6 bars"></div>
-                    <p class="day">sat</p>
-                </div>
-                <div class="graphic">
-                    <p class="cash"></p>
-                    <div class="bar7 bars"></div>
-                    <p class="day">sun</p>
-                </div>
+            <img class="balance__logo" src="./image/logo.svg" alt="logo">
+        </div>
+
+        <div class="chart">
+            <h2 class="chart__title">Speding - Last 7 days</h2>
+            <div class="chart__bars-container">
+
+                <!-- <div class="chart__bar">
+                    <div class="chart__bar--label">$35.20</div>
+                    <div class="chart__bar--day">mon</div>
+                </div> -->
+
             </div>
-                <!-- footer -->
-            <div class="wrap-footer">
-                <div class="total-month">
-                    <h6 class="title-footer">Total this month</h6>
-                    <p class="money-footer">$478.33</p>
+
+            <div class="chart__analitics">
+                <div>
+                    <p class="chart__total">Total this month</p>
+                    <p class="chart__total--value">$478.33</p>
                 </div>
-                <div class="percentage">
-                    <p class="percent">+2.4%</p>
-                    <h6 class="percent-ft">from last month</h6>
+                <div>
+                    <p class="chart__porcentage">+2.4%</p>
+                    <p class="chart__period">from last month</p>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <script src="./src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 </html>
